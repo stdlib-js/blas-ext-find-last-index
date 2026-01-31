@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import findLastIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-ext-find-last-index/tags). For example,
+
+```javascript
 import findLastIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@v0.1.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@v0.1.0-esm/index.mjs';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@esm/index.mjs';
 ```
 
 #### findLastIndex( x\[, options], clbk\[, thisArg] )
@@ -282,7 +287,7 @@ The method accepts the following options:
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
-import findLastIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@v0.1.0-esm/index.mjs';
+import findLastIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@esm/index.mjs';
 
 // Define a callback function:
 function isEven( v ) {
