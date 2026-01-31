@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/blas-ext-find-last-index",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Return the index of the last element along an ndarray dimension which passes a test implemented by a predicate function.",
   "license": "Apache-2.0",
   "author": {
@@ -41,9 +41,9 @@
     "@stdlib/assert-is-function": "^0.2.2",
     "@stdlib/assert-is-ndarray-like": "^0.2.2",
     "@stdlib/assert-is-plain-object": "^0.2.2",
-    "@stdlib/blas-ext-base-ndarray-gfind-last-index": "github:stdlib-js/blas-ext-base-ndarray-gfind-last-index#main",
+    "@stdlib/blas-ext-base-ndarray-gfind-last-index": "^0.1.0",
     "@stdlib/ndarray-base-unary-reduce-strided1d-dispatch-by-factory": "github:stdlib-js/ndarray-base-unary-reduce-strided1d-dispatch-by-factory#main",
-    "@stdlib/ndarray-dtypes": "^0.3.0",
+    "@stdlib/ndarray-dtypes": "^0.4.0",
     "@stdlib/ndarray-ndims": "^0.2.2",
     "@stdlib/string-format": "^0.2.2",
     "@stdlib/types": "^0.4.3",
@@ -93,7 +93,6 @@
     "array",
     "ndarray"
   ],
-  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
