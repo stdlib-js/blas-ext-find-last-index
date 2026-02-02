@@ -35,32 +35,20 @@ limitations under the License.
 
 > Return the index of the last element along an [ndarray][@stdlib/ndarray/ctor] dimension which passes a test implemented by a predicate function.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/blas-ext-find-last-index
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var findLastIndex = require( '@stdlib/blas-ext-find-last-index' );
+import findLastIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@esm/index.mjs';
+```
+
+You can also import the following named exports from the package:
+
+```javascript
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@esm/index.mjs';
 ```
 
 #### findLastIndex( x\[, options], clbk\[, thisArg] )
@@ -68,7 +56,7 @@ var findLastIndex = require( '@stdlib/blas-ext-find-last-index' );
 Returns the index of the last element along an [ndarray][@stdlib/ndarray/ctor] dimension which passes a test implemented by a predicate function.
 
 ```javascript
-var array = require( '@stdlib/ndarray-array' );
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
 
 function isEven( v ) {
     return v % 2.0 === 0.0;
@@ -104,7 +92,7 @@ To set the callback execution context, provide a `thisArg`.
 <!-- eslint-disable no-invalid-this -->
 
 ```javascript
-var array = require( '@stdlib/ndarray-array' );
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
 
 function isEven( v ) {
     this.count += 1;
@@ -135,7 +123,7 @@ The function accepts the following options:
 If no element along an [ndarray][@stdlib/ndarray/ctor] dimension passes a test implemented by the predicate function, the corresponding element in the returned [ndarray][@stdlib/ndarray/ctor] is `-1`.
 
 ```javascript
-var array = require( '@stdlib/ndarray-array' );
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
 
 function isEven( v ) {
     return v % 2.0 === 0.0;
@@ -156,8 +144,8 @@ var idx = out.get();
 By default, the function performs the operation over elements in the last dimension. To perform the operation over a different dimension, provide a `dim` option.
 
 ```javascript
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var array = require( '@stdlib/ndarray-array' );
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
 
 function isEven( v ) {
     return v % 2.0 === 0.0;
@@ -179,8 +167,8 @@ var idx = ndarray2array( out );
 By default, the function excludes reduced dimensions from the output [ndarray][@stdlib/ndarray/ctor]. To include the reduced dimensions as singleton dimensions, set the `keepdims` option to `true`.
 
 ```javascript
-var array = require( '@stdlib/ndarray-array' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
 
 function isEven( v ) {
     return v % 2.0 === 0.0;
@@ -203,9 +191,9 @@ var idx = ndarray2array( out );
 By default, the function returns an [ndarray][@stdlib/ndarray/ctor] having a [data type][@stdlib/ndarray/dtypes] determined by the function's output data type [policy][@stdlib/ndarray/output-dtype-policies]. To override the default behavior, set the `dtype` option.
 
 ```javascript
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var dtype = require( '@stdlib/ndarray-dtype' );
-var array = require( '@stdlib/ndarray-array' );
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
+import dtype from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtype@esm/index.mjs';
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
 
 function isEven( v ) {
     return v % 2.0 === 0.0;
@@ -229,8 +217,8 @@ var dt = dtype( idx );
 Returns the index of the last element along an [ndarray][@stdlib/ndarray/ctor] dimension which passes a test implemented by a predicate function and assigns results to a provided output [ndarray][@stdlib/ndarray/ctor].
 
 ```javascript
-var array = require( '@stdlib/ndarray-array' );
-var zeros = require( '@stdlib/ndarray-zeros' );
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
+import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
 
 function isEven( v ) {
     return v % 2.0 === 0.0;
@@ -285,11 +273,16 @@ The method accepts the following options:
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var ndarray = require( '@stdlib/ndarray-ctor' );
-var findLastIndex = require( '@stdlib/blas-ext-find-last-index' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
+import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
+import findLastIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@esm/index.mjs';
 
 // Define a callback function:
 function isEven( v ) {
@@ -314,6 +307,10 @@ var idx = findLastIndex( x, opts, isEven );
 
 // Print the results:
 console.log( ndarray2array( idx ) );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -337,7 +334,7 @@ console.log( ndarray2array( idx ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -400,13 +397,13 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-find-last-index/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/esm
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/esm
 
-[@stdlib/ndarray/output-dtype-policies]: https://github.com/stdlib-js/ndarray-output-dtype-policies
+[@stdlib/ndarray/output-dtype-policies]: https://github.com/stdlib-js/ndarray-output-dtype-policies/tree/esm
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes/tree/esm
 
 </section>
 
