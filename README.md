@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import findLastIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@deno/mod.js';
+import findLastIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@v0.1.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@deno/mod.js';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@v0.1.1-deno/mod.js';
 ```
 
 #### findLastIndex( x\[, options], clbk\[, thisArg] )
@@ -277,7 +277,7 @@ The method accepts the following options:
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
-import findLastIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@deno/mod.js';
+import findLastIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-last-index@v0.1.1-deno/mod.js';
 
 // Define a callback function:
 function isEven( v ) {
