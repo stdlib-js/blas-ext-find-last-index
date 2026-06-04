@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-05-22)
+## Unreleased (2026-06-04)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`ec68ca7`](https://github.com/stdlib-js/stdlib/commit/ec68ca7cc35210db29a028d561ec71968e2ff753) - **docs:** fix TSDoc errors in `blas` declarations [(#12529)](https://github.com/stdlib-js/stdlib/pull/12529) _(by Philipp Burckhardt, Athan Reines)_
 -   [`1c2eddf`](https://github.com/stdlib-js/stdlib/commit/1c2eddf59350cdc7dfd3d66eab07ab0291d5f9f6) - **test:** fix dtype comparisons _(by Athan Reines)_
 -   [`a0169bc`](https://github.com/stdlib-js/stdlib/commit/a0169bcfc0d05ac94c206ac5d6d0a898ec304463) - **docs:** remove unused `ndarray2array` requires from README usage examples [(#11194)](https://github.com/stdlib-js/stdlib/pull/11194) _(by Philipp Burckhardt)_
 -   [`88723aa`](https://github.com/stdlib-js/stdlib/commit/88723aa94033307c7e1dad498c7b18fbd47e9601) - **bench:** refactor to use string interpolation in blas/ext/find-last-index [(#10824)](https://github.com/stdlib-js/stdlib/pull/10824) _(by Kamal Singh Rautela)_
