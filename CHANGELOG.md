@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-19)
+## Unreleased (2026-08-26)
+
+<section class="features">
+
+### Features
+
+-   [`e4bfc44`](https://github.com/stdlib-js/stdlib/commit/e4bfc4472f96e7f2b19753f70437e097a08eb2e2) - add `fromIndex` support to `blas/ext/find-last-index` [(#14647)](https://github.com/stdlib-js/stdlib/pull/14647)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`e4bfc44`](https://github.com/stdlib-js/stdlib/commit/e4bfc4472f96e7f2b19753f70437e097a08eb2e2) - **feat:** add `fromIndex` support to `blas/ext/find-last-index` [(#14647)](https://github.com/stdlib-js/stdlib/pull/14647) _(by Muhammad Haris)_
 -   [`1eb5c15`](https://github.com/stdlib-js/stdlib/commit/1eb5c15f20bacaf54a2fb41ff6a134423bc04c8e) - **chore:** add keywords [(#14379)](https://github.com/stdlib-js/stdlib/pull/14379) _(by Philipp Burckhardt)_
 -   [`b17716c`](https://github.com/stdlib-js/stdlib/commit/b17716c5954f979e72011c0dd34dde9853f3a661) - **chore:** modernize benchmarks and examples [(#12884)](https://github.com/stdlib-js/stdlib/pull/12884) _(by Karan Anand, Athan Reines)_
 -   [`ec68ca7`](https://github.com/stdlib-js/stdlib/commit/ec68ca7cc35210db29a028d561ec71968e2ff753) - **docs:** fix TSDoc errors in `blas` declarations [(#12529)](https://github.com/stdlib-js/stdlib/pull/12529) _(by Philipp Burckhardt, Athan Reines)_
@@ -30,11 +41,12 @@
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Kamal Singh Rautela
 -   Karan Anand
+-   Muhammad Haris
 -   Philipp Burckhardt
 
 </section>

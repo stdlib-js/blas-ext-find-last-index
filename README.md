@@ -63,7 +63,7 @@ To view installation and usage instructions specific to each branch build, be su
 var findLastIndex = require( '@stdlib/blas-ext-find-last-index' );
 ```
 
-#### findLastIndex( x\[, options], clbk\[, thisArg] )
+#### findLastIndex( x\[, fromIndex]\[, options], clbk\[, thisArg] )
 
 Returns the index of the last element along an [ndarray][@stdlib/ndarray/ctor] dimension which passes a test implemented by a predicate function.
 
@@ -89,6 +89,7 @@ var idx = out.get();
 The function has the following parameters:
 
 -   **x**: input [ndarray][@stdlib/ndarray/ctor]. Must have at least one dimension.
+-   **fromIndex**: index from which to begin searching (_optional_). May be either a scalar value or an [ndarray][@stdlib/ndarray/ctor] having an integer index or "generic" [data type][@stdlib/ndarray/dtypes]. If provided an [ndarray][@stdlib/ndarray/ctor], the value must have a shape which is [broadcast-compatible][@stdlib/ndarray/base/broadcast-shapes] with the non-reduced dimensions of the input [ndarray][@stdlib/ndarray/ctor]. For example, given the input shape `[2, 3, 4]` and `options.dim=0`, a provided [ndarray][@stdlib/ndarray/ctor] must have a shape which is [broadcast-compatible][@stdlib/ndarray/base/broadcast-shapes] with the shape `[3, 4]`. If provided a negative integer, the index at which to begin searching along a dimension is determined by counting backward from the last element (where `-1` refers to the last element). Default: `-1`.
 -   **options**: function options (_optional_).
 -   **clbk**: callback function.
 -   **thisArg**: callback execution context (_optional_).
@@ -151,6 +152,27 @@ var out = findLastIndex( x, isEven );
 
 var idx = out.get();
 // returns -1
+```
+
+By default, the function begins searching from the last element along the operation dimension. To begin searching from a different index, provide a `fromIndex` argument.
+
+```javascript
+var array = require( '@stdlib/ndarray-array' );
+
+function isEven( v ) {
+    return v % 2.0 === 0.0;
+}
+
+// Create an input ndarray:
+var x = array( [ 2.0, 1.0, 3.0, 4.0, 5.0, 6.0 ] );
+// returns <ndarray>
+
+// Perform operation:
+var out = findLastIndex( x, 2, isEven );
+// returns <ndarray>
+
+var idx = out.get();
+// returns 0
 ```
 
 By default, the function performs the operation over elements in the last dimension. To perform the operation over a different dimension, provide a `dim` option.
@@ -223,7 +245,7 @@ var dt = dtype( idx );
 // returns 'generic'
 ```
 
-#### findLastIndex.assign( x, out\[, options], clbk\[, thisArg] )
+#### findLastIndex.assign( x\[, fromIndex], out\[, options], clbk\[, thisArg] )
 
 Returns the index of the last element along an [ndarray][@stdlib/ndarray/ctor] dimension which passes a test implemented by a predicate function and assigns results to a provided output [ndarray][@stdlib/ndarray/ctor].
 
@@ -253,6 +275,7 @@ var bool = ( out === y );
 The method has the following parameters:
 
 -   **x**: input [ndarray][@stdlib/ndarray/ctor]. Must have at least one dimension.
+-   **fromIndex**: index from which to begin searching (_optional_). May be either a scalar value or an [ndarray][@stdlib/ndarray/ctor] having an integer index or "generic" [data type][@stdlib/ndarray/dtypes]. If provided an [ndarray][@stdlib/ndarray/ctor], the value must have a shape which is [broadcast-compatible][@stdlib/ndarray/base/broadcast-shapes] with the non-reduced dimensions of the input [ndarray][@stdlib/ndarray/ctor]. For example, given the input shape `[2, 3, 4]` and `options.dim=0`, a provided [ndarray][@stdlib/ndarray/ctor] must have a shape which is [broadcast-compatible][@stdlib/ndarray/base/broadcast-shapes] with the shape `[3, 4]`. If provided a negative integer, the index at which to begin searching along a dimension is determined by counting backward from the last element (where `-1` refers to the last element). Default: `-1`.
 -   **out**: output [ndarray][@stdlib/ndarray/ctor].
 -   **options**: function options (_optional_).
 -   **clbk**: callback function.
